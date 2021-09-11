@@ -14,8 +14,33 @@ html {
 }
 
 #header {
-    height: 46px;
+    height: 45.6px;
     background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#header .search-btn {
+    float: right;
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 15px;
+    line-height: 45.6px;
+    padding: 0 23px;
+}
+
+#nav {
+    display: inline-block;
 }
 
 #nav, .subnav {
@@ -37,7 +62,7 @@ html {
 
 #nav li a {
     text-decoration: none;
-    line-height: 46px;
+    line-height: 45.6px;
     padding: 0 24px;
     display: inline-block;
 }
@@ -67,14 +92,43 @@ html {
     padding: 0 12px;
 }
 
-#slider {
+#nav .nav-arrow-down {
+    font-size: 15px;
+}
 
+#slider {
+    position: relative;
+    margin-top: 45.6px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') center / cover no-repeat;
 }
 
 #content {
-
+    height: 1000px;
 }
 
 #footer {
 
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+#slider .text-heading,
+#slider .text-description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
