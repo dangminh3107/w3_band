@@ -103,14 +103,6 @@ html {
     background: url('/assets/img/slider/slider1.jpg') center / cover no-repeat;
 }
 
-#content {
-    height: 1000px;
-}
-
-#footer {
-
-}
-
 #slider .text-content {
     position: absolute;
     bottom: 47px;
@@ -131,4 +123,48 @@ html {
 #slider .text-heading,
 #slider .text-description {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+    height: 1000px;
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    margin: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    text-align: justify;  
+    font-size: 15px;
+    margin: 15px;
+    line-height: 1.5;
+}
+
+#content .section-heading,
+#content .section-sub-heading,
+#content .about-text {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+#footer {
+
 }
