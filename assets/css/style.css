@@ -6,6 +6,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,6 +16,67 @@ html {
 
 .text-white {
     color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.col-full {
+    width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
 }
 
 #main {
@@ -134,12 +196,11 @@ html {
 }
 
 #content {
-    height: 1000px;
 }
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -174,14 +235,8 @@ html {
 }
 
 #content .member-list {
-    margin: 32px 0;
-    text-align: center;
+    margin-top: 48px;
     /* overflow: hidden; dùng để sửa float */
-}
-
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
 }
 
 #content .member-name {
@@ -232,15 +287,9 @@ html {
 }
 
 .place-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    margin-top: 32px;
 }
 
-.place-item {
-    float: left;
-    width: calc(100% / 3);
-    padding: 0 8px;
-}
 
 .place-img {
     width: 100%;
@@ -273,20 +322,6 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    padding: 8px 16px;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
-}
-
 .modal {
     position: fixed;
     top: 0;
@@ -309,6 +344,7 @@ html {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.5s;
 }
 
 .modal-close {
@@ -385,7 +421,76 @@ html {
     color: #2196F3;
 }
 
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+}
+
+.contact-info i[class*="fas fa"] { /* dấu *= thể hiện trong class i có chứa chuỗi "fas fa" */
+    /*Ngoài ra cũng có thể dùng ".contact-info i" thôi cũng đc*/
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-submit-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.map-section img {
+    width: 100%;
+}
 
 #footer {
+    padding: 64px 16px;
+    text-align: center;
+}
 
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4)
+}
+
+#footer .copyright {
+    font-size: 15px;
+    padding: 15px 0;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tạo animation hiển thị form mua vé */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
