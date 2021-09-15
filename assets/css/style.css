@@ -34,6 +34,10 @@ html {
     margin-top: 16px !important;
 }
 
+.s-mt-8 {
+    margin-top: 8px !important;
+}
+
 .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -91,7 +95,13 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .mobile-menu-btn,
@@ -143,8 +153,9 @@ html {
 }
 
 #nav li a {
+    width: 100%;
     text-decoration: none;
-    line-height: 46px;
+    line-height: 46.5px;
     padding: 0 24px;
     display: inline-block;
 }
@@ -250,7 +261,7 @@ html {
 }
 
 #content .member-list {
-    margin-top: 48px;
+    margin-top: 32px;
     /* overflow: hidden; dùng để sửa float */
 }
 
@@ -302,7 +313,7 @@ html {
 }
 
 .place-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 
