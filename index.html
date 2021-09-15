@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/css/all.css">
 </head>
 <body>
@@ -28,6 +29,11 @@
             </ul>
             <div class="search-btn">
                 <i class="search-icon fas fa-search"></i>
+            </div>
+
+            <!-- Mobile -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fas fa-bars"></i>
             </div>
         </div>
 
@@ -189,6 +195,32 @@
     <!-- END FORM BUY TICKET -->
 
     <script>
+        // BEGIN RESPONSIVE
+        var header = document.getElementById('header')
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight
+
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerHeight
+            if (isClose) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        for (var i=0; i<menuItems.length; i++) {
+            var menuItem = menuItems[i]
+
+            menuItem.onclick = function() {
+                header.style.height = null;
+            }
+        }
+        // END RESPONSIVE
+
+        // BEGIN SHOW FORM TICKET
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
@@ -217,6 +249,7 @@
         modalContainer.addEventListener('click', function(event){
             event.stopPropagation()
         })
+        // END SHOW FORM
     </script>
 </body>
 </html>
